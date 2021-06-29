@@ -1,0 +1,30 @@
+python -m pip3 install -U pip
+
+pip --version	显示版本和路径
+
+pip --help	帮助
+
+pip install -U pip	升级pip
+
+pip install 模块=版本	安装包
+
+pip install --upgrade 模块	升级包
+
+pip uninstall 模块	卸载包
+
+pip search 模块	搜索包
+
+pip show 显示安装包信息
+
+pip show -f 模块	查看指定模块的详细信息
+
+pip list	列出安装包
+
+pip list -o		查看可升级包
+
+pip install -i （加链接路径）
+1.https://pypi.tuna.tsinghua.edu.cn/simple/#清华大学
+2.https://mirror.aliyun.com/pypi/simple/#阿里云
+3.https://pip.douban.com/simple/#豆瓣
+4.https://pypi.mirrors.ustc.edu.cn/simple/#中国科学技术大学
+
