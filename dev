@@ -1,0 +1,55 @@
+Git 使用前配置：
+	1.git config --global user.name 提交人姓名
+	2.git config --global user.email  提交人邮箱
+	3.git config --list  查看配置信息
+	4. 如需要修改，重复上述命令即可
+
+0. git init 初始化git仓库
+
+1. git status  查看过渡区的文件状况
+
+2. git add 文件名  提交文件到过渡区
+
+3. git commit -m ‘提交注释’正式提交到git的本地仓库
+
+4.git log 查看提交的记录
+
+6. git diff HEAD -- 文件名 查看此文件变动信息
+
+7. git restore  文件名   	可以从git本地仓库中下载文件到工作目录  
+    git reset HEAD 文件名  	从缓存取撤回文件
+
+8. git log --pretty=oneline 	查看提交 版本信息在一行显示
+    git log --oneline		每行显示一条commit
+
+9. git reset --hard HEAD~3  		表示回退3个版本（^^^三个版本，可以回退删除的文件）
+    git reset --hard 版本信息标识 	可以回退到指定的版本
+
+10. git reflog  可以查看所有的提交信息，包括之前回退后没有标识信息的版本
+
+11. git ls-files   查看git本地仓库的文件信息
+
+12. git checkout -- 文件名     可以从git本地仓库中下载文件到工作目录（工作目录文件可以直接删除）
+      git checkout 分支名	切换分支（或  git switch 分支名）
+      git checkout -b 分支名	创建分支并切换到该分支上
+      git branch 分支名	创建分支
+      git branch 		查看分支列表
+
+      git merge 分支名	将该分支上的文件合并到master 上（在切换到master的前提下）
+      git branch -d 分支名	将该分支删除		
+      
+
+13. git rm 文件名  可以删除git本地仓库和工作目录的文件   
+      git add 文件名  可以删除已存在的文件（没有就是添加）
+
+
+与Github关联方法
+	ssh-keygen –t rsa(生成秘钥key，用于关联远程仓库，如github)，生成了id_rsa和id_rsa.pub
+	将生成id_rsa.pub用记事本或者其他软件打开，将其全部复制到github上
+	再点击New SSH key
+	Tile 是填写SSH key的标题名字
+	Key 是id_rsa.pub复制的文件数据内容，
+
+
+
+
