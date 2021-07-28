@@ -89,6 +89,20 @@
 
 13. time  加执行文件，可以计时运行文件消耗时间
 
+14. ubuntu 系统命令行设置投屏显示 
+
+     > ```bash
+     > # 使用单显示屏---关闭笔记电脑屏幕（即主屏 LVDS-1不同笔记本可能不一样有eDP-1端口等）
+     > xrandr --output LVDS-1 --off  
+     > #扩展屏幕模式
+     > xrandr --output HDMI-1 --right-of LVDS-1 --auto
+     > # 切回主屏命令（或者直接合上笔记本再打开）
+     > xrandr --output LVDS-1 --auto
+     > 
+     > ```
+
+     [Ubuntu系统笔记本投屏显示器方法---参考](https://blog.csdn.net/qq_38863413/article/details/101454236)
+
 ### 2.文本编辑器    
 
 + vi/vim
@@ -119,7 +133,7 @@
     >
     > echo "hello,world">hello.txt
 
-    + 
+    
 
 ### 3.GCC编译器
 
@@ -192,3 +206,65 @@
     + -std=c++11   设置编译标准
 
         > g++  -std=c++11 test.cpp 
+
+### 4.Vs code 高频使用快捷键  
+
+| 功能                 | 快捷键               | 功能                 | 快捷键                            |
+| -------------------- | -------------------- | -------------------- | --------------------------------- |
+| 文件检索             | ctrl + p             | 关闭文件             | ctrl + w                          |
+| 打开命令面板         | ctrl + shift + p     | 当前行上下移动       | alt+Up/Down                       |
+| 打开终端             | ctrl + `             | 变量名统一命名       | F2                                |
+| 关闭侧边栏           | ctrl + B             | 转到变量定义处       | F12                               |
+| 复制文本             | ctrl + c             | 保存文本             | ctrl + s                          |
+| 粘贴文本             | ctrl + v             | 撤销操作             | ctrl + z                          |
+| 删除当前行           | ctrl + d（自定义）   | 代码格式化           | ctrl +shift + i（Format Document) |
+| 在当前行向下插入一行 | ctrl + enter         | 光标移到行首/行尾    | home/end                          |
+| 在当前行向上插入一行 | ctrl + shift + enter | 根据单词快速移动光标 | ctrl + 左右方向键                 |
+| 查找/替换            | ctrl+F/ctrl +H       | 单词小写转大写       | shift + q（自定义）               |
+| 全屏                 | F11                  | 单词大写转小写       | shift + w（自定义）               |
+| 空间大小缩放         | ctrl + +/-           | 编辑区大小缩放       | ctrl + 鼠标滚轮                   |
+
+### 5.Vim 常用快捷操作	
+
+| 功能(命令模式下) | 快捷键                          | 功能(命令模式下)                       | 快捷键   |
+| ---------------- | ------------------------------- | -------------------------------------- | -------- |
+| 上下左右移动     | h/j/k/l(方向键)                 | 插入(编辑模式)                         | i        |
+| 删除/剪切当前行  | dd                              | 按词向后移动                           | w        |
+| 复制当前行       | yy                              | 按词向前移动                           | b        |
+| 粘贴(向下)       | p                               | 选中当前行                             | V        |
+| 撤销             | u                               | 上一页                                 | ctrl + b |
+| 反撤销           | ctrl + r                        | 下一页                                 | ctrl + f |
+| 回到首端         | gg / home                       | 重复上一次命令                         | `        |
+| 回到尾端         | G / end                         | 删除当前字符                           | x        |
+| 全局替换         | :% s/要替内容/内容/g            | 在查找str选中下，向下移动光标定位到str | n        |
+| 局部替换         | :开始行,结束行s/要替换内容/内容 | 在查找str选中下，向上移动光标定位到str | N        |
+| 定位指定行       | 数字+gg                         |                                        |          |
+| 搜索内容         | :/内容                          |                                        |          |
+| 自动补全         | ctrl + n (Vim默认)              |                                        |          |
+| 删除当前行       | cc                              |                                        |          |
+
++ 保存文件并退出------ :wq!		# 感叹号
+
++ 退出不保存------ :q 
+
++ 模式切换--------- esc
+
++ Vim 插件下载官网（演示：插件管理器Vundle.vim ,不同管理器下载、卸载方式有差异）----- [Vim Awesome](https://vimawesome.com/plugin/youcompleteme)
+
+    + 在命令模式下，输入: PluginInstall  下载插件(前提：在./vimrc 文件中添加插件名称)
+    + 输入：PluginClean 卸载插件(前提：在./vimrc 文件中删除插件或注释)
+
++ Vim 三种模式
+
+    + 命令模式(Command mode)：启动时默认状态，可以执行移动、复制、删除等操作，不可编辑
+
+    + 插入模式(Insert mode)：按 i 进入编辑模式，正常文本编辑
+
+    + 底行模式(Last line mode)：执行保存、退出以及其他的一些功能。按下Shift+:即可进入底行模式
+
+        
+
++ Vim键盘快捷键图示[链接](https://www.runoob.com/wp-content/uploads/2015/10/vi-vim-cheat-sheet-sch.gif)
+
+<img src="/home/robot/图片/Vim键盘快捷键图示.gif" alt="Vim键盘快捷键图示" style="zoom: 80%;" />
+
